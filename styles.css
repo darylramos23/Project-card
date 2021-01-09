@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: 0;
+}
+body{
+  font-size: 18px;
+  font-family: 'Kumbh Sans', sans-serif;
+  max-height: 100vh;
+  position: relative;
+  background: linear-gradient(45deg, hsl(185, 77%, 29%),hsl(185, 99%, 36%));
+  color: hsl(229, 23%, 23%);
+}
+.top-circle{
+  position:absolute;
+  width: 100vh;
+  height: 100vh;
+  background-image: url('bg-pattern-top.svg');
+  background-size:contain;
+  background-repeat: no-repeat;
+  top: -50vh;
+  left: 0;
+}
+
+.bottom-circle{
+  position:absolute;
+  width: 100vh;
+  height: 100vh;
+  bottom:0;
+  right:0;
+  overflow: hidden;
+  
+}
+.bottom-circle::before{
+  content: '';
+  position: absolute;
+  height: 120%;
+  width: 120%;
+  bottom: -50vh;
+
+  background-image: url('bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.container{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.card-container{
+  z-index: 1;
+  height: 380px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  background-image: url('bg-pattern-card.svg');
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px 1px hsla(227, 10%, 46%, 0.26);
+}
+.top-part{
+  margin-top: 11vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.followers-likes-photos{
+  position: relative;
+  bottom: 0;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  border-top: 1px solid hsl(0, 0%, 59%);;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+  border: 5px solid white;
+  border-radius: 50%;
+}
+.name{
+  margin-top: 20px;
+  font-size: 1em;
+}
+.name span{
+  margin-left: 10px;
+  color:hsl(0, 0%, 59%);
+  font-weight: 400;
+}
+.country{
+  
+  color:hsl(0, 0%, 59%);
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+.footer-text{
+  font-weight: 700;
+  text-align:center;
+}
+.footer-text span + span{
+  color:hsl(0, 0%, 59%);
+  margin-top:5px;
+  font-size: 0.7em;
+  font-weight: 400;
+}
